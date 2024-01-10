@@ -1,0 +1,202 @@
+*{
+    box-sizing: border-box;
+    font-family: "Garet",sans-serif; 
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vh;
+    height: 100vh;
+    overflow-x: hidden;
+    
+}
+
+.custom-shape-divider-bottom-1701959631 {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1701959631svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 166px;
+}
+
+.custom-shape-divider-bottom-1701959631 .shape-fill {
+    fill: #193f4e;
+}
+
+.top{
+    width: 100vw;
+    height: 550px;
+    background-image: url(images/Untitled\ design.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    
+}
+
+.head{
+    color: white;
+    font-size: 2em;
+    user-select: none;
+    
+}
+.logos{
+    position: relative;
+    top: -80px;
+}
+.head img{
+    fill: white;
+    width: 75px;
+    filter: brightness(0) invert(1);
+}
+
+.Navigation a{
+    position: relative;
+    text-decoration: none;
+    color:white;
+    font-size: 1.1em;
+    margin-left: 40px;
+}
+
+.Navigation a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.Navigation a:hover:after{
+    transform: scaleX(1);
+}
+
+
+.Navigation button{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.1em;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 50px;
+    transition: .5s;
+
+}
+.Navigation button:hover{
+    background: white;
+    color: black;
+}
+.Navigation button:focus{
+
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(2px);
+}
+
+.arrow{
+    width: 30px;
+    position: relative;
+    top: 140px;
+    left: 21px;
+    filter: brightness(0) invert(0);
+}
+.mono{
+    color: white;
+    font-size: 19px;
+    text-shadow: 2px 2px 2px black;
+    fill: white;
+    
+    
+}
+.branding{
+    color: white;
+    font-size: 60px;
+    font-weight: 800;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+.stat{
+    position: relative;
+    top: 75px;
+    left: 100px;
+}
+#curve{
+    fill: transparent;
+    
+}
+.login_register{
+    position: relative;
+    top:130px;
+    left: 220px;
+    outline: none;
+    border: none;
+    background-color: white;;
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    border: 0.1px solid white;
+    transition: .5s;
+}
+.login_register:hover{
+    background: #03131a;
+    color: white;
+}
+
+.logo{
+    position: relative;
+    left: 100px;
+    top: 150px;
+}
+.Navigation .home{
+    background-color: white;
+    color: black;
+    border-radius: 5px
+}
+.top{
+    padding: 0;
+    margin: 0;
+}
+.menu{
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color: #193f4e;
+    display: grid;
+    
+    
+}
+
