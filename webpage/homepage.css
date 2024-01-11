@@ -195,9 +195,9 @@ header{
 .menu{
     width: 100vw;
     padding: 0;
-    margin: 0;
     background-color: #193f4e;
     display: grid;
+    height: 1000px;
 
     
     
@@ -215,7 +215,9 @@ header{
     color: white;
 }
 .gridwrapper{
-    margin-top: 100px;
+    margin-left: 100px;
+    position: relative;
+    bottom: 125px;
     width: 100vw;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -223,9 +225,58 @@ header{
     align-items: center;
 }
 
+
+
+.item img{
+    height: 400px;
+    width: 400px;
+
+}
+.item p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+}
+.item{
+    width: 400px;
+    background-color: white;
+    border-radius: 100px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+}
+.item button{
+    background-color: #193f4e;
+    color: white;
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+    left: 150px;
+    bottom: 20px;
+    cursor: pointer;
+    border: 0.1px solid black;
+    transition: .5s;
+
+}
+.item button:hover{
+    background: #03131a;
+    color: white;
+}
 footer{
     background-color: #03131a;
+    width: 100vw;
+    height: 200px;
+    box-shadow:20px 40px rgba(0, 0, 0, 1);;
+}
+footer img{
+    width: 100px;
+    filter: brightness(0) invert(1);
 }
 
-
-
+.social-media img{
+    position: relative;
+    left: 50%;
+    height: 60pxpx;
+    width: 60px;
+}
