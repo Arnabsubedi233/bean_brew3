@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Welcome to bean and brew")
+    return render(request,"home/homepage.html")
