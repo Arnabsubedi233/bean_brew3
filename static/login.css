@@ -104,6 +104,11 @@ header{
     backdrop-filter: blur(20px);
     transition: height .18s ease;
     overflow: hidden;
+    position: absolute;
+    
+    
+
+    
 }
 .wrapper .login{
     width: 100%;
