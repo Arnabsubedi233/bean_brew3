@@ -3,6 +3,7 @@ from userauths.forms import UserRegisterForm
 from django.contrib.auth import login,authenticate
 from django.contrib import messages
 
+
 # Create your views here.
 def register_view(request):
     if request.method == "POST":
@@ -17,8 +18,16 @@ def register_view(request):
             return redirect("home:index")
     else:
         form = UserRegisterForm()
+        
 
     context = {
-        'form': form
+        'form': form,
+        
+        
     }
     return render(request,"userauths/login.html",context)
+
+
+
+
+
