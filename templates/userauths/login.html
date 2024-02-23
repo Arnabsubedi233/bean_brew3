@@ -23,13 +23,14 @@
     <div class="wrapper">
         <div class="login">
             <h2>Login</h2>
-            <form action="#">
+            <form action="" method="POST">
+                {% csrf_token %}
                 <div class="input_box">
-                    <input type="email"  required>
+                    {{form.email}}
                     <label>Email</label>
                 </div>
                 <div class="input_box">
-                    <input type="password"  required >
+                    {{form.password1}}
                     <label >password</label>
                 </div>
                 <div class="Remember-forgot">
@@ -46,13 +47,19 @@
             </form>
         </div>
         <div class="form-register">
+            {% if form.errors %}
+            <div class="alert alert-danger">
+                <strong>{{form.errors}}</strong>
+            </div>
+            {% endif %}
             <h2>Register</h2>
-            <form action="#" method="POST">
+            <form action="" method="POST">
                 {% csrf_token %}
 
                 <div class="input_box">
                     {{form.username}}
-                    <label>Username</label>
+                    <label>username</label>
+
                 </div>
                 <div class="input_box">
                     {{form.email}}
@@ -76,6 +83,7 @@
                 </div>
                 
             </form>
+            
             
         </div>
     </div>

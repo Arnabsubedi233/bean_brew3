@@ -14,7 +14,7 @@ def register_view(request):
             new_user = authenticate(username = form.cleaned_data['email'],
                                     password= form.cleaned_data['password1'])
             login(request,new_user)
-            return redirect("core:index")
+            return redirect("home:index")
     else:
         form = UserRegisterForm()
 
