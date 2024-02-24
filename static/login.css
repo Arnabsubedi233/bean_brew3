@@ -90,7 +90,6 @@ header{
 }
 
 
-
 .wrapper{
     width: 400px;
     height: 650px;
@@ -103,12 +102,9 @@ header{
     backdrop-filter: blur(20px);
     transition: height .18s ease;
     overflow: hidden;
- 
-    
-    
-
     
 }
+
 .wrapper .login{
     width: 100%;
     padding: 40px;
