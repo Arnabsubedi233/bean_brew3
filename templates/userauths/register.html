@@ -7,6 +7,7 @@
     <title>Login</title>
     <link href="https://fonts.cdnfonts.com/css/garet" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
 </head>
 <body>
@@ -20,50 +21,85 @@
             
         </nav> 
     </header>
-    <div class="wrapper">
-        
-        <div class="form-register">
-            {% if form.errors %}
-            <div class="alert alert-danger">
-                <strong>{{form.errors}}</strong>
+    <div class="container2">
+        <div class="wrapper">
+            
+            <div class="form-register">
+                {% if form.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{form.errors}}</strong>
+                </div>
+                {% endif %}
+                <h2>Register</h2>
+                <form action="" method="POST">
+                    {% csrf_token %}
+
+                    <div class="input_box">
+                        {{form.username}}
+                        <label>username</label>
+
+                    </div>
+                    <div class="input_box">
+                        {{form.email}}
+                        <label>Email</label>
+                    </div>
+                    <div class="input_box">
+                        {{form.password1}}
+                        <label >password</label>
+                    </div>
+                    <div class="input_box">
+                        {{form.password2}}
+                        <label >Confirm password</label>
+                    </div> 
+                    
+                    <div class="Remember-forgot">
+                        <label ><input type="checkbox" required>I agree to terms and conditions</label>
+                    </div>
+                    <button class = "btn" type="submit">Register</button>
+                    <div class="register">
+                        <p>Have a account?<a class="login-link" href="#">Login</a></p>
+                    </div>
+                    
+                </form>
+                
+                
             </div>
-            {% endif %}
-            <h2>Register</h2>
-            <form action="" method="POST">
-                {% csrf_token %}
-
-                <div class="input_box">
-                    {{form.username}}
-                    <label>username</label>
-
-                </div>
-                <div class="input_box">
-                    {{form.email}}
-                    <label>Email</label>
-                </div>
-                <div class="input_box">
-                    {{form.password1}}
-                    <label >password</label>
-                </div>
-                <div class="input_box">
-                    {{form.password2}}
-                    <label >Confirm password</label>
-                </div> 
-                
-                <div class="Remember-forgot">
-                    <label ><input type="checkbox" required>I agree to terms and conditions</label>
-                </div>
-                <button class = "btn" type="submit">Register</button>
-                <div class="register">
-                    <p>Have a account?<a class="login-link" href="#">Login</a></p>
-                </div>
-                
-            </form>
-            
-            
         </div>
     </div>
     
-    <script src="{%static 'login.js' %}"></script>
+    <footer class="footer">
+        <div class="cont">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Bean and Brew</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Our Store</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms and conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Online store</h4>
+                    <ul>
+                        <li><a href="#">Booking table</a></li>
+                        <li><a href="#">Pre-order coffee</a></li>
+                        <li><a href="#">Custom hamper ordering</a></li>
+                        <li><a href="#">Online cooking lessons</a></li>
+                        <li><a href="#">Order Baked goods for collection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

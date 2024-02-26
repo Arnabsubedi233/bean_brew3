@@ -43,7 +43,7 @@ def LoginView(request):
 
         user = authenticate(request,email=email,password = password)
         
-        if user is not none:
+        if user is not None:
             login(request,user)
             messages.success(request,f"You are logged in!")
             return redirect("home:index")
