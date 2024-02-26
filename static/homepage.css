@@ -122,9 +122,7 @@ body{
     background: white;
     color: black;
 }
-.Navigation button:focus{
 
-}
 
 
 header{
@@ -140,6 +138,10 @@ header{
     align-items: center;
     z-index: 99;
     backdrop-filter: blur(1px);
+}
+.ProfilePicture{
+    
+
 }
 
 .arrow{
