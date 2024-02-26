@@ -5,4 +5,6 @@ from userauths.models import User
 class UserRegisterForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['username','email']
+        fields = ['username','email']   
+
+
