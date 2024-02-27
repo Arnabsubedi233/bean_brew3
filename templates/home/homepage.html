@@ -22,7 +22,36 @@
                 
                 
             </nav> 
-            <img src="{% static 'images/profile.png' %}" class="ProfilePicture">
+            <img src="{% static 'images/profile.png' %}" class="ProfilePicture" onclick="toggleMenu()">
+
+            <div class="submenu-wrap" id="subMenu">
+                <div class="submenu">
+                    <div class="user-info">
+                        <img src="{% static 'images/profile.png' %}" class="profile-pic">
+                        <h2>Profile Menu</h2>
+                    </div>
+                    <hr>
+                    <a href="#" class="submenu-link">
+                        <img src="{% static 'images/profile2.png' %}" class="profile-pic1">
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="submenu-link">
+                        <img src="{% static 'images/sign-up.png' %}" class="profile-pic1">
+                        <p>Register</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="submenu-link">
+                        <img src="{% static 'images/login.png' %}" class="profile-pic1">
+                        <p>Login</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="submenu-link">
+                        <img src="{% static 'images/logout.png' %}" class="profile-pic1">
+                        <p>Sign Out</p>
+                        <span>></span>
+                    </a>
+                </div>
         </header>
         <div class="custom-shape-divider-bottom-1701959631">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -110,7 +139,13 @@
         </div>
     </footer>
     
-    
+    <script>
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
     
     
     
