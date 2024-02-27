@@ -445,6 +445,26 @@ ul{
     background-color: #ffffff;
 
 }
+.alert-danger{
+    color: black;
+    width: 100vh;
+    height: 30px;
+    background-color: rgba(228, 96, 87,0.5);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+.alert-success{
+    color: black;
+    width: 100vh;
+    height: 30px;
+    background-color: rgba(82, 231, 66,0.5);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
 @media(max-width: 767px){
     .footer-col{
         width: 50%;
