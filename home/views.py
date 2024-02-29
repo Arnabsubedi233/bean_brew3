@@ -7,3 +7,6 @@ def index(request):
 
 def store(request):
     return render(request,'Store/services.html')
+
+def about(request):
+    return render(request,'about/About.html')
