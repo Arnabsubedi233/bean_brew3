@@ -3,9 +3,10 @@ from userauths.forms import UserRegisterForm
 from django.contrib.auth import login,authenticate,logout
 from django.contrib import messages
 from django.conf import settings
+from userauths.models import User
 
 
-User = settings.AUTH_USER_MODEL
+
 
 
 # Create your views here.
@@ -30,8 +31,8 @@ def register_view(request):
     return render(request,"userauths/register.html",context)
 
 def LoginView(request):
-    #if request.user.is_authenticated:
-        #return redirect("home:index")
+    if request.user.is_authenticated:
+        return redirect("home:index")
     
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -39,17 +40,18 @@ def LoginView(request):
 
         try:
             user = User.objects.get(email = email)
+            user = authenticate(request,email=email,password = password)
+        
+            if user is not None:
+                login(request,user)
+                messages.success(request,f"You are logged in!")
+                return redirect("home:index")
+            else:
+                messages.warning(request,f'User does not exist!,Create an account')
         except:
             messages.warning(request,f'User with {email} does not exist!')
 
-        user = authenticate(request,email=email,password = password)
-        
-        if user is not None:
-            login(request,user)
-            messages.success(request,f"You are logged in!")
-            return redirect("home:index")
-        else:
-             messages.warning(request,f'User does not exist!,Create an account')
+       
             
         
     return render(request,"userauths/login.html")
