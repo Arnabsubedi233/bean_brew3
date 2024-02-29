@@ -7,6 +7,6 @@ app_name = "home"
 
 urlpatterns = [
     path("",index,name = "index"),
-    path('store/',store,name='store'),
-    path('about/',about,name='about')
+    path('store/',home.reserve_table,name='reserve_table'),
+    path('about/',about,name='about'),
 ]
