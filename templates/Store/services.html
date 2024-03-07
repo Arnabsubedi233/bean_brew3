@@ -57,6 +57,44 @@
                     {% endif %}
                 </div>
             </div>
+            <div class="submenu-wrap1" id="subMenu1">
+                <div class="submenu1">
+                            <h2>Book a table</h2>
+                            <form action="" method="POST">
+                                {% csrf_token %}
+                                
+                                <div class="input_box">
+                                    {{form.name}}
+                                    <label>Name</label>
+                                </div>
+                                <div class="input_box">
+                                    {{form.email}}
+                                    <label>Email</label>
+                                </div>
+                                <div class="input_box">
+                                    {{form.phone}}
+                                    <label>phone</label>
+                                </div>
+                                <div class="input_box">
+                                    {{form.restaurant}}
+                                    <label>restaurant</label>
+                                </div>
+                                <div class="input_box">
+                                    {{form.number_persons}}
+                                    <label>No.Persons</label>
+                                </div>
+                                <div class="input_box">
+                                    {{form.date}}
+                                    <label>Date</label>
+                                </div>
+                                <div class="input_box">
+                                    {{form.time}}
+                                    <label>Time</label>
+                                </div>
+                                <Button class="btn" type="submit">Submit</Button>
+                                
+                            </form>
+            </div>
         
 
                 <div class="custom-shape-divider-bottom-1706826610">
@@ -75,7 +113,7 @@
             <div class="boxes">
                 <h1>Booking table</h1>
                 <img src="{% static 'images/frapp.png' %}" alt="">
-                <button>Explore</button>
+                <button onclick="toggleMenu1()">Explore</button>
             </div>
             <div class="boxes">
                 <h1>Online lessons</h1>
@@ -135,6 +173,11 @@
 
         function toggleMenu(){
             subMenu.classList.toggle("open-menu");
+        }
+        let subMenu1 = document.getElementById("subMenu1");
+
+        function toggleMenu1(){
+            subMenu1.classList.toggle("open-menu");
         }
     </script>
     
